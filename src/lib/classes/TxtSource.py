@@ -1,9 +1,9 @@
 import os
 import pandas as pd
-from lib.classes.FilesSources import FilesSources
 
+from lib.classes.FileSource import FileSource
 
-class TxtSource(FilesSources):
+class TxtSource(FileSource):
     def create_path(self):
         current_directory = os.getcwd()
         self.folder_path = os.path.join(current_directory, 'data', 'txt_files')

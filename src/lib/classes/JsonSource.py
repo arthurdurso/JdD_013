@@ -1,11 +1,11 @@
 import json
 import os
-from lib.classes.FilesSources import FilesSources
+from lib.classes.FileSource import FileSource
 
-class JsonSource(FilesSources):
+class JsonSource(FileSource):
     def create_path(self):
         current_directory = os.getcwd()
-        self.folder_path = os.path.join(current_directory, 'json_files')
+        self.folder_path = os.path.join(current_directory, 'data', 'json_files')
         if not os.path.exists(self.folder_path):
             os.makedirs(self.folder_path)
 
@@ -31,7 +31,6 @@ class JsonSource(FilesSources):
             return None
     
     def get_data(self):
-
         data = []
         for file_path in self.previous_files:
             if file_path.endswith('.json'):

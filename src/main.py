@@ -1,8 +1,9 @@
 import schedule
 import time
-from lib.classes.CsvSource import CsvSource
+
+from lib.classes.CsvSource  import CsvSource
 from lib.classes.JsonSource import JsonSource
-from lib.classes.TxtSource import TxtSource
+from lib.classes.TxtSource  import TxtSource
 
 # Função para verificar novos arquivos
 def check_for_new_files():

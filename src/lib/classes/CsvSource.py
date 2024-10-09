@@ -1,9 +1,10 @@
 import os
 import pandas as pd
-from lib.classes.FilesSources import FilesSources
+
+from lib.classes.FileSource import FileSource
 
 
-class CsvSource(FilesSources):
+class CsvSource(FileSource):
     def create_path(self):
         current_directory = os.getcwd()
         self.folder_path = os.path.join(current_directory, 'data', 'csv_files')
@@ -39,6 +40,3 @@ class CsvSource(FilesSources):
         else:
             return None
     
-    def transform_data_to_df(self):
-        return super().transform_data_to_df()
-        
